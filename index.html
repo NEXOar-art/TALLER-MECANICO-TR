@@ -6,10 +6,8 @@
 <meta name="description" content="Taller Mecánico TR - Diagnóstico Automotriz Computarizado y Mecánica Integral. Turnos online rápidos y profesionales.">
 <meta name="theme-color" content="#0A0A0A">
 <title>Taller Mecánico TR | Diagnóstico Automotriz Profesional</title>
-<!-- Preconnect para mejor rendimiento-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Tailwind CSS CDN + Supresor de warnings-->
 <script>
 (function(){
 const originalWarn= console.warn;
@@ -18,9 +16,7 @@ if(typeof args[0]=== 'string' && args[0].includes('cdn.tailwindcss.com')) return
 originalWarn.apply(console, args); }; })();
 </script>
 <script src="https://cdn.tailwindcss.com/3.4.14"></script>
-<!-- Font Awesome-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<!-- Google Fonts-->
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <script>
 tailwind.config ={
@@ -43,6 +39,11 @@ gold:'#D4AF37',
 amber:'#FFB300',
 bronze:'#CD7F32',
 },
+accent:{
+blue:'#1E90FF',
+cyan:'#00CED1',
+silver:'#E8E8E8',
+},
 },
 boxShadow:{
 'neon':'0 0 25px rgba(50, 205, 50, 0.45)',
@@ -50,6 +51,7 @@ boxShadow:{
 'card':'0 10px 40px-10px rgba(0, 0, 0, 0.5)',
 'soft':'0 4px 20px rgba(0, 0, 0, 0.15)',
 'gold-glow':'0 0 25px rgba(212, 175, 55, 0.45)',
+'logo-glow':'0 8px 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2)',
 },
 screens:{
 'xs':'475px',
@@ -98,6 +100,7 @@ shimmer:{
 --gradient-metallic: linear-gradient(135deg,#E8E8E8 0%,#A8A8A8 50%,#E8E8E8 100%);
 --gradient-green-glow: linear-gradient(135deg, rgba(50,205,50,0.3) 0%, rgba(0,255,0,0.1) 100%);
 --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #FFB300 50%, #D4AF37 100%);
+--gradient-accent: linear-gradient(135deg, #1E90FF 0%, #00CED1 50%, #32CD32 100%);
 }
 *{
 -webkit-tap-highlight-color: transparent;
@@ -222,10 +225,10 @@ background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b0
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-opacity: 0.08;
+opacity: 0.06;
 z-index: -2;
 animation: backgroundMove 30s ease-in-out infinite;
-filter: brightness(0.6) contrast(1.2);
+filter: brightness(0.5) contrast(1.3) saturate(0.8);
 }
 @keyframes backgroundMove{
 0%, 100%{ transform: scale(1) translate(0, 0); }
@@ -406,12 +409,19 @@ animation: micro-bounce 0.5s ease;
 .btn-review:hover::after{ opacity: 1; }
 .btn-review:active{ transform: translateY(-1px) scale(0.98); }
 
-/* Scrollbar personalizado*/
+/* Scrollbar personalizado mejorado*/
 ::-webkit-scrollbar{ width: 8px; height: 8px; }
-::-webkit-scrollbar-track{ background: rgba(26, 26, 26, 0.6); border-radius: 4px; transition: background 0.3s ease; }
-::-webkit-scrollbar-track:hover{ background: rgba(26, 26, 26, 0.8); }
-::-webkit-scrollbar-thumb{ background: linear-gradient(180deg,#D4AF37,#B8941E); border-radius: 4px; border: 2px solid transparent; background-clip: content-box; transition: background 0.3s ease; }
-::-webkit-scrollbar-thumb:hover{ background: linear-gradient(180deg,#FFB300,#D4AF37); }
+::-webkit-scrollbar-track{ background: linear-gradient(180deg, #1a1a1a, #0a0a0a); border-radius: 4px; }
+::-webkit-scrollbar-thumb{ 
+background: linear-gradient(180deg,#D4AF37,#FFB300,#D4AF37); 
+border-radius: 4px; 
+border: 2px solid #1a1a1a; 
+background-clip: content-box;
+transition: background 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover{ 
+background: linear-gradient(180deg,#FFB300,#D4AF37,#FFB300); 
+}
 
 /* Responsive typography */
 @media(max-width: 640px){ .text-5xl{font-size: 2.25rem; line-height: 1.15;} .text-7xl{font-size: 2.75rem; line-height: 1.1;} h1{font-size: 2.3rem;} .container{padding-left: 1.25rem; padding-right: 1.25rem;} }
@@ -421,8 +431,8 @@ animation: micro-bounce 0.5s ease;
 .status-dot{ position: relative; }
 .status-dot::after{ content:''; position: absolute; top:-2px; left:-2px; right:-2px; bottom:-2px; border-radius: 50%; background: inherit; filter: blur(4px); opacity: 0.7; animation: pulse 2s infinite; }
 
-/* Separador decorativo*/
-.divider{ height: 1px; background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent); margin: 2rem 0; }
+/* Separador decorativo mejorado*/
+.divider{ height: 1px; background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), rgba(50, 205, 50, 0.3), transparent); margin: 2rem 0; }
 
 /* Efecto de partículas sutil con micro-interacciones*/
 .particles{ position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; overflow: hidden; z-index: 0; }
@@ -452,42 +462,132 @@ box-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
 .label-below span.required{ color: #EF4444; margin-left: 2px; }
 .input-modern:focus + .label-below{ color: #FFB300; transform: translateX(4px); }
 
-/* Logo styles - CON EFECTO REFLEJO Y MICRO-ANIMACIONES */
+/* ========== LOGO OVALADO CON EFECTO DE REFLEJO ========== */
+
+/* Navbar Logo - FORMA OVALADA */
 .navbar-logo{
-height: 65px; width: 65px; object-fit: cover; border-radius: 50%;
-border: 3px solid #D4AF37; box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-transition: all 0.3s ease; position: relative;
+height: 58px;
+width: 88px;
+object-fit: contain;
+border-radius: 50% / 35%; /* Forma ovalada horizontal */
+border: 2px solid rgba(212, 175, 55, 0.8);
+box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), inset 0 0 10px rgba(212, 175, 55, 0.1);
+transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+position: relative;
+overflow: visible;
+background: rgba(10, 10, 10, 0.3);
 }
+
+/* Efecto de brillo/reflejo superior en logo navbar */
+.navbar-logo::before{
+content:'';
+position: absolute;
+top: 4%;
+left: 15%;
+width: 40%;
+height: 30%;
+background: linear-gradient(160deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 40%, transparent 70%);
+border-radius: 50% / 35%;
+filter: blur(2px);
+opacity: 0.7;
+transition: opacity 0.3s ease;
+pointer-events: none;
+z-index: 2;
+}
+
+/* REFLEJO ESPEJO debajo del logo navbar */
 .navbar-logo::after{
-content:''; position: absolute; top: 5%; left: 10%; width: 35%; height: 35%;
-background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, transparent 70%);
-border-radius: 50%; filter: blur(2px); opacity: 0.6;
+content:'';
+position: absolute;
+bottom: -70%;
+left: 50%;
+transform: translateX(-50%) scaleY(-1);
+width: 80%;
+height: 50%;
+background: linear-gradient(to top, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+border-radius: 50% / 35%;
+filter: blur(4px);
+opacity: 0.5;
+pointer-events: none;
 transition: opacity 0.3s ease;
 }
+
 .navbar-logo:hover{ 
-transform: scale(1.1); 
-box-shadow: 0 0 30px rgba(212, 175, 55, 0.8); 
+transform: scale(1.1) translateY(-2px);
+box-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 8px 40px rgba(212, 175, 55, 0.3);
+border-color: #D4AF37;
 animation: micro-bounce 0.5s ease;
 }
-.navbar-logo:hover::after{ opacity: 0.8; }
+.navbar-logo:hover::before{ opacity: 1; }
+.navbar-logo:hover::after{ opacity: 0.7; }
 
+/* Hero Logo - FORMA OVALADA */
 .hero-logo{
-height: 8rem; width: 8rem; object-fit: cover; border-radius: 50%;
-border: 4px solid #D4AF37; box-shadow: 0 0 30px rgba(212, 175, 55, 0.6), 0 0 60px rgba(212, 175, 55, 0.3);
-transition: all 0.3s ease; animation: pulse-gold 3s ease-in-out infinite; position: relative;
+height: 9rem;
+width: 13rem;
+object-fit: contain;
+border-radius: 50% / 35%; /* Forma ovalada horizontal */
+border: 3px solid rgba(212, 175, 55, 0.9);
+box-shadow: 0 0 30px rgba(212, 175, 55, 0.6), 0 0 60px rgba(212, 175, 55, 0.3), inset 0 0 15px rgba(212, 175, 55, 0.15);
+transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+position: relative;
+overflow: visible;
+animation: pulse-gold 3s ease-in-out infinite;
+background: rgba(10, 10, 10, 0.2);
 }
+
+/* Efecto de brillo/reflejo superior en logo hero */
+.hero-logo::before{
+content:'';
+position: absolute;
+top: 5%;
+left: 12%;
+width: 35%;
+height: 28%;
+background: linear-gradient(160deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.25) 35%, transparent 65%);
+border-radius: 50% / 35%;
+filter: blur(3px);
+opacity: 0.8;
+transition: opacity 0.3s ease;
+pointer-events: none;
+z-index: 2;
+}
+
+/* REFLEJO ESPEJO debajo del logo hero */
 .hero-logo::after{
-content:''; position: absolute; top: 8%; left: 12%; width: 30%; height: 30%;
-background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, transparent 70%);
-border-radius: 50%; filter: blur(3px); opacity: 0.7;
+content:'';
+position: absolute;
+bottom: -60%;
+left: 50%;
+transform: translateX(-50%) scaleY(-1);
+width: 75%;
+height: 45%;
+background: linear-gradient(to top, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.08) 30%, transparent 70%);
+border-radius: 50% / 35%;
+filter: blur(6px);
+opacity: 0.6;
+pointer-events: none;
+transition: opacity 0.3s ease;
 }
+
 .hero-logo:hover{ 
-transform: scale(1.05); 
-box-shadow: 0 0 40px rgba(212, 175, 55, 0.8), 0 0 80px rgba(212, 175, 55, 0.4);
+transform: scale(1.05) translateY(-4px);
+box-shadow: 0 0 40px rgba(212, 175, 55, 0.8), 0 0 80px rgba(212, 175, 55, 0.4), 0 12px 50px rgba(0,0,0,0.3);
 animation: micro-tilt 0.3s ease-out;
 }
+.hero-logo:hover::before{ opacity: 1; }
+.hero-logo:hover::after{ opacity: 0.8; }
 
-@media(max-width: 768px){ .navbar-logo{height: 50px; width: 50px;} .hero-logo{height: 5rem; width: 5rem;} }
+/* Responsive logos ovalados */
+@media(max-width: 768px){ 
+    .navbar-logo{height: 45px; width: 68px; border-width: 1.5px;} 
+    .hero-logo{height: 5.5rem; width: 8.5rem;}
+}
+@media(max-width: 475px){
+    .navbar-logo{height: 40px; width: 60px;}
+    .hero-logo{height: 4.5rem; width: 7rem;}
+}
+/* ========== FIN LOGO OVALADO CON REFLEJO ========== */
 
 /* Language Switcher Styles con micro-efectos */
 .lang-switcher{
@@ -531,6 +631,30 @@ cursor: pointer;
 transform: scale(1.2) translateY(-5px);
 filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.6));
 }
+
+/* Mejoras visuales generales de la paleta */
+section:nth-child(even){
+background: linear-gradient(180deg, #0A0A0A 0%, #0D0D0D 50%, #0A0A0A 100%);
+}
+
+/* Contenedor de reflejo para hero logo */
+.hero-logo-wrapper{
+position: relative;
+display: inline-block;
+}
+
+/* Overlay de color sutil en secciones para cohesión */
+section::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: radial-gradient(ellipse at center top, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
+pointer-events: none;
+z-index: 0;
+}
 </style>
 </head>
 <body class="antialiased relative">
@@ -560,7 +684,7 @@ filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.6));
 <!-- NAVBAR-->
 <nav class="fixed w-full z-50 glass border-b border-white/10 transition-all duration-300" id="navbar">
 <div class="container mx-auto px-4 h-16 md:h-20 flex items-center relative">
-<!-- LOGO -->
+<!-- LOGO OVALADO -->
 <a href="#" class="flex items-center md:absolute md:left-4 md:translate-x-0">
 <img src="TALLERTR.png" alt="Taller Mecánico TR Logo" class="navbar-logo">
 </a>
@@ -603,11 +727,11 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 <!-- HERO SECTION-->
 <header class="relative pt-20 pb-20 md:pt-28 md:pb-28 lg:pt-36 lg:pb-32 min-h-screen flex items-center overflow-hidden">
 <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-[#0D0D0D] to-[#0A0A0A]">
-<div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 20% 35%, rgba(212, 175, 55, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(255, 179, 0, 0.12) 0%, transparent 45%)"></div>
+<div class="absolute inset-0 opacity-25" style="background-image: radial-gradient(circle at 20% 35%, rgba(212, 175, 55, 0.18) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(255, 179, 0, 0.15) 0%, transparent 45%)"></div>
 </div>
 <div id="parallax-container" class="absolute inset-0 overflow-hidden">
-<img id="parallax-img" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1974&auto=format&fit=crop" alt="Taller mecánico profesional" class="parallax-image w-full h-full object-cover opacity-35 parallax-bg">
-<div class="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/80 to-transparent"></div>
+<img id="parallax-img" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1974&auto=format&fit=crop" alt="Taller mecánico profesional" class="parallax-image w-full h-full object-cover opacity-30 parallax-bg">
+<div class="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/85 to-transparent"></div>
 </div>
 <div class="container mx-auto px-4 md:px-6 relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 <div class="space-y-6 md:space-y-8 max-w-2xl">
@@ -618,7 +742,9 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 </div>
 <h1 class="font-display font-black text-4xl md:text-5xl lg:text-7xl leading-tight glow-text main-title fade-in-up flex items-center gap-6" style="animation-delay: 0.2s;">
 <span data-es="DIAGNÓSTICO Y<br>MANTENIMIENTO INTEGRAL" data-en="DIAGNOSIS AND<br>INTEGRAL MAINTENANCE">DIAGNÓSTICO Y<br><span class="gradient-text">MANTENIMIENTO INTEGRAL</span></span>
+<div class="hero-logo-wrapper">
 <img src="TALLERTR.png" alt="Taller Mecánico TR Logo" class="hero-logo flex-shrink-0">
+</div>
 </h1>
 
 <p class="text-gray-300/90 text-base md:text-lg max-w-xl description-text fade-in-up leading-relaxed" style="animation-delay: 0.3s;" 
@@ -720,7 +846,7 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 
 <!-- SECCIÓN: SERVICIOS INTEGRALES-->
 <section class="py-16 md:py-24 bg-primary-dark relative">
-<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 10% 20%, rgba(50, 205, 50, 0.08) 0%, transparent 25%), radial-gradient(circle at 90% 80%, rgba(34, 139, 34, 0.08) 0%, transparent 25%)"></div>
+<div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(circle at 10% 20%, rgba(50, 205, 50, 0.1) 0%, transparent 25%), radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 25%)"></div>
 <div class="container mx-auto px-4 relative z-10">
 <div class="text-center mb-14 md:mb-20">
 <div class="inline-block bg-primary-green/15 border border-primary-green/30 text-primary-green px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-5">
@@ -1039,7 +1165,7 @@ const dotDesktop= document.getElementById('status-dot-desktop');
 const textDesktop= document.getElementById('status-text-desktop');
 const barMobile= document.getElementById('status-bar-mobile');
 const now = new Date();
-const day = now.getDay(); // 0 = Domingo, 1 = Lunes, etc.
+const day = now.getDay();
 const hour = now.getHours();
 const minutes = now.getMinutes();
 const currentTime = hour * 60 + minutes;
@@ -1173,7 +1299,7 @@ ticking = true;
 },{passive: true});
 }
 
-// Navbar scroll effect con micro-transiciones
+// Navbar scroll effect
 const navbar= document.getElementById('navbar');
 if(navbar){
 window.addEventListener('scroll',()=>{
@@ -1190,7 +1316,7 @@ link.addEventListener('animationend', function(){ this.style.animation = ''; });
 
 // Inicialización
 checkStatus();
-setInterval(checkStatus, 60000); // Verificar estado cada minuto
+setInterval(checkStatus, 60000);
 startCounters();
 document.querySelectorAll('.fade-in-up').forEach((el, i)=>{ el.style.animationDelay=`${0.1+ i*0.12}s`; });
 
@@ -1208,7 +1334,7 @@ window.scrollTo({ top: targetElement.offsetTop-80, behavior:'smooth' });
 });
 });
 
-// Micro-efecto: partículas siguen sutilmente el cursor (performance optimized)
+// Micro-efecto: partículas siguen sutilmente el cursor
 let particleFollow = false;
 document.addEventListener('mousemove', (e) => {
 if(!particleFollow && Math.random() > 0.95){
