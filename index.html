@@ -191,7 +191,6 @@ margin: 0 20px;
 opacity: 0.6;
 }
 
-/* WhatsApp en el banner */
 .banner-whatsapp{
 display: inline-flex;
 align-items: center;
@@ -237,7 +236,6 @@ body{ padding-top: 46px; }
 }
 /* ========== FIN BANNER INFORMATIVO ========== */
 
-/* Background Image with Animation */
 body::before{
 content:'';
 position: fixed;
@@ -259,7 +257,6 @@ filter: brightness(0.5) contrast(1.3) saturate(0.8);
 75%{ transform: scale(1.05) translate(1%, -1%); }
 }
 
-/* Glassmorphism moderno con micro-efectos*/
 .glass{
 background: rgba(23, 23, 23, 0.8);
 backdrop-filter: blur(20px);
@@ -285,7 +282,6 @@ transform: translateY(-6px);
 box-shadow: var(--shadow-card), 0 0 30px rgba(245, 158, 11, 0.15);
 }
 
-/* Textos y efectos mejorados*/
 .glow-text{
 text-shadow: 0 0 20px rgba(245, 158, 11, 0.6), 0 0 40px rgba(251, 191, 36, 0.3);
 letter-spacing:-0.02em;
@@ -319,7 +315,6 @@ background-clip: text;
 50%{opacity: 0.85; box-shadow: 0 0 35px rgba(245, 158, 11, 0.7);}
 }
 
-/* Animaciones de entrada*/
 .fade-in-up{
 opacity: 0;
 transform: translateY(30px);
@@ -327,7 +322,6 @@ animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 @keyframes fadeInUp{ to{opacity: 1; transform: translateY(0);} }
 
-/* Hover effects profesionales con micro-efectos*/
 .hover-lift{ transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1); }
 .hover-lift:hover{ 
 transform: translateY(-8px); 
@@ -335,7 +329,6 @@ box-shadow: var(--shadow-glow), var(--shadow-card);
 animation: micro-bounce 0.6s ease-in-out;
 }
 
-/* Parallax suave*/
 .parallax-image{ transition: transform 0.4s ease-out; will-change: transform; filter: brightness(0.85) contrast(1.1); }
 .parallax-bg{ animation: subtle-move 25s ease-in-out infinite alternate; }
 @keyframes subtle-move{
@@ -344,7 +337,6 @@ animation: micro-bounce 0.6s ease-in-out;
 100%{transform: translate(0, 0) scale(1.03);}
 }
 
-/* Inputs modernos con micro-efectos*/
 .input-modern{
 background: rgba(23, 23, 23, 0.85);
 border: 1px solid rgba(255, 255, 255, 0.12);
@@ -371,7 +363,6 @@ background-size: 1.3em;
 .input-invalid{ border-color:#EF4444!important; animation: shake 0.5s ease-in-out; }
 @keyframes shake{ 0%, 100%{transform: translateX(0);} 25%{transform: translateX(-4px);} 75%{transform: translateX(4px);} }
 
-/* Botones premium con micro-efectos*/
 .btn-primary{
 background: var(--gradient-primary);
 color:#0A0A0A;
@@ -409,7 +400,6 @@ animation: micro-bounce 0.5s ease;
 }
 .btn-outline:active{ transform: translateY(-1px) scale(0.98); }
 
-/* Botón de reseñas con micro-efectos*/
 .btn-review{
 background: linear-gradient(135deg,#FBBF24 0%,#F59E0B 100%);
 color:#0A0A0A;
@@ -432,7 +422,6 @@ animation: micro-bounce 0.5s ease;
 .btn-review:hover::after{ opacity: 1; }
 .btn-review:active{ transform: translateY(-1px) scale(0.98); }
 
-/* Scrollbar personalizado mejorado*/
 ::-webkit-scrollbar{ width: 8px; height: 8px; }
 ::-webkit-scrollbar-track{ background: linear-gradient(180deg, #1a1a1a, #0a0a0a); border-radius: 4px; }
 ::-webkit-scrollbar-thumb{ 
@@ -446,18 +435,14 @@ transition: background 0.3s ease;
 background: linear-gradient(180deg,#FBBF24,#F59E0B,#FBBF24); 
 }
 
-/* Responsive typography */
 @media(max-width: 640px){ .text-5xl{font-size: 2.25rem; line-height: 1.15;} .text-7xl{font-size: 2.75rem; line-height: 1.1;} h1{font-size: 2.3rem;} .container{padding-left: 1.25rem; padding-right: 1.25rem;} }
 @media(max-width: 475px){ .text-3xl{font-size: 1.75rem;} .py-24{padding-top: 3.5rem; padding-bottom: 3.5rem;} .glass-card{border-radius: 16px;} }
 
-/* Badge de estado animado*/
 .status-dot{ position: relative; }
 .status-dot::after{ content:''; position: absolute; top:-2px; left:-2px; right:-2px; bottom:-2px; border-radius: 50%; background: inherit; filter: blur(4px); opacity: 0.7; animation: pulse 2s infinite; }
 
-/* Separador decorativo mejorado*/
 .divider{ height: 1px; background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.4), rgba(34, 205, 94, 0.3), transparent); margin: 2rem 0; }
 
-/* Efecto de partículas sutil con micro-interacciones*/
 .particles{ position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; overflow: hidden; z-index: 0; }
 .particle{ 
 position: absolute; 
@@ -480,14 +465,11 @@ box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
 100%{transform: translateY(-20px) translateX(50px); opacity: 0;} 
 }
 
-/* Labels debajo de inputs */
 .label-below{ display: block; margin-top: 0.5rem; margin-left: 0.25rem; font-size: 0.75rem; font-weight: 500; color: #F59E0B; transition: color 0.3s ease, transform 0.3s ease; }
 .label-below span.required{ color: #EF4444; margin-left: 2px; }
 .input-modern:focus + .label-below{ color: #FBBF24; transform: translateX(4px); }
 
 /* ========== LOGO RECTANGULAR RESPONSIVO ========== */
-
-/* Navbar Logo - Contenedor */
 .navbar-logo{
 height: 62px;
 width: 140px;
@@ -504,8 +486,6 @@ align-items: center;
 justify-content: center;
 flex-shrink: 0;
 }
-
-/* Imagen del logo navbar - se adapta perfectamente */
 .navbar-logo img{
 width: 100%;
 height: 100%;
@@ -513,8 +493,6 @@ object-fit: contain;
 border-radius: 10px;
 display: block;
 }
-
-/* Efecto de brillo/reflejo superior en logo navbar */
 .navbar-logo::before{
 content:'';
 position: absolute;
@@ -530,8 +508,6 @@ transition: opacity 0.3s ease;
 pointer-events: none;
 z-index: 3;
 }
-
-/* REFLEJO ESPEJO debajo del logo navbar - EFECTO HOVER */
 .navbar-logo::after{
 content:'';
 position: absolute;
@@ -547,7 +523,6 @@ opacity: 0;
 pointer-events: none;
 transition: all 0.3s ease;
 }
-
 .navbar-logo:hover{ 
 transform: scale(1.08) translateY(-3px);
 box-shadow: 0 0 40px rgba(245, 158, 11, 0.85), 0 10px 50px rgba(245, 158, 11, 0.4), var(--logo-glow);
@@ -556,7 +531,6 @@ border-color: #FBBF24;
 .navbar-logo:hover::before{ opacity: 1; }
 .navbar-logo:hover::after{ opacity: 0.85; }
 
-/* Hero Logo - Contenedor RESPONSIVO */
 .hero-logo{
 height: 7rem;
 width: 16rem;
@@ -574,8 +548,6 @@ align-items: center;
 justify-content: center;
 flex-shrink: 0;
 }
-
-/* Imagen del logo hero - se adapta perfectamente */
 .hero-logo img{
 width: 100%;
 height: 100%;
@@ -583,8 +555,6 @@ object-fit: contain;
 border-radius: 14px;
 display: block;
 }
-
-/* Efecto de brillo/reflejo superior en logo hero */
 .hero-logo::before{
 content:'';
 position: absolute;
@@ -600,8 +570,6 @@ transition: opacity 0.3s ease;
 pointer-events: none;
 z-index: 3;
 }
-
-/* REFLEJO ESPEJO debajo del logo hero - EFECTO HOVER */
 .hero-logo::after{
 content:'';
 position: absolute;
@@ -617,7 +585,6 @@ opacity: 0;
 pointer-events: none;
 transition: all 0.3s ease;
 }
-
 .hero-logo:hover{ 
 transform: scale(1.06) translateY(-5px);
 box-shadow: 0 0 50px rgba(245, 158, 11, 0.9), 0 0 90px rgba(245, 158, 11, 0.45), 0 15px 60px rgba(0,0,0,0.35), var(--logo-glow);
@@ -625,96 +592,31 @@ box-shadow: 0 0 50px rgba(245, 158, 11, 0.9), 0 0 90px rgba(245, 158, 11, 0.45),
 .hero-logo:hover::before{ opacity: 1; }
 .hero-logo:hover::after{ opacity: 0.9; }
 
-/* Responsive logos - TABLET */
 @media(max-width: 768px){ 
-    .navbar-logo{
-        height: 50px; 
-        width: 115px; 
-        border-width: 2px; 
-        border-radius: 14px; 
-        padding: 7px;
-    }
-    .navbar-logo img{ 
-        border-radius: 9px; 
-    }
-    .hero-logo{
-        height: 5.5rem; 
-        width: 13rem; 
-        border-radius: 16px; 
-        padding: 12px;
-        border-width: 3px;
-    }
-    .hero-logo img{ 
-        border-radius: 12px; 
-    }
+    .navbar-logo{height: 50px; width: 115px; border-width: 2px; border-radius: 14px; padding: 7px;}
+    .navbar-logo img{ border-radius: 9px; }
+    .hero-logo{height: 5.5rem; width: 13rem; border-radius: 16px; padding: 12px; border-width: 3px;}
+    .hero-logo img{ border-radius: 12px; }
 }
-
-/* Responsive logos - MÓVIL GRANDE */
 @media(max-width: 640px){
-    .navbar-logo{
-        height: 46px;
-        width: 105px;
-        border-radius: 13px;
-        padding: 6px;
-    }
-    .navbar-logo img{
-        border-radius: 8px;
-    }
-    .hero-logo{
-        height: 4.5rem;
-        width: 11rem;
-        border-radius: 14px;
-        padding: 10px;
-        border-width: 2.5px;
-    }
-    .hero-logo img{
-        border-radius: 10px;
-    }
+    .navbar-logo{height: 46px; width: 105px; border-radius: 13px; padding: 6px;}
+    .navbar-logo img{ border-radius: 8px; }
+    .hero-logo{height: 4.5rem; width: 11rem; border-radius: 14px; padding: 10px; border-width: 2.5px;}
+    .hero-logo img{ border-radius: 10px; }
 }
-
-/* Responsive logos - MÓVIL PEQUEÑO */
 @media(max-width: 475px){
-    .navbar-logo{
-        height: 40px;
-        width: 90px;
-        border-radius: 12px;
-        padding: 5px;
-        border-width: 2px;
-    }
-    .navbar-logo img{
-        border-radius: 7px;
-    }
-    .hero-logo{
-        height: 4rem;
-        width: 9.5rem;
-        border-radius: 12px;
-        padding: 8px;
-        border-width: 2px;
-    }
-    .hero-logo img{
-        border-radius: 8px;
-    }
-    .hero-logo-wrapper{
-        margin-left: 1rem;
-    }
+    .navbar-logo{height: 40px; width: 90px; border-radius: 12px; padding: 5px; border-width: 2px;}
+    .navbar-logo img{ border-radius: 7px; }
+    .hero-logo{height: 4rem; width: 9.5rem; border-radius: 12px; padding: 8px; border-width: 2px;}
+    .hero-logo img{ border-radius: 8px; }
+    .hero-logo-wrapper{ margin-left: 1rem; }
 }
-
-/* Responsive logos - MÓVIL MUY PEQUEÑO */
 @media(max-width: 380px){
-    .navbar-logo{
-        height: 36px;
-        width: 80px;
-        padding: 4px;
-    }
-    .hero-logo{
-        height: 3.5rem;
-        width: 8.5rem;
-        padding: 7px;
-    }
+    .navbar-logo{height: 36px; width: 80px; padding: 4px;}
+    .hero-logo{height: 3.5rem; width: 8.5rem; padding: 7px;}
 }
 /* ========== FIN LOGO RECTANGULAR RESPONSIVO ========== */
 
-/* Language Switcher Styles con micro-efectos */
 .lang-switcher{
 background: rgba(245, 158, 11, 0.18); border: 2px solid rgba(245, 158, 11, 0.45);
 color: #fff; font-weight: 600; padding: 0.5rem 1rem; border-radius: 10px;
@@ -727,7 +629,6 @@ transform: translateY(-2px);
 }
 .lang-switcher:active{ transform: translateY(0) scale(0.98); }
 
-/* Cards de servicios con micro-efectos adicionales */
 .glass-card .fa-solid, .glass-card .fa-brands{
 transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -736,7 +637,6 @@ transform: scale(1.15) rotate(8deg);
 color: #FBBF24;
 }
 
-/* Testimonios con efecto hover mejorado */
 .testimonial-card{
 transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -746,7 +646,6 @@ border-color: rgba(245, 158, 11, 0.6);
 box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(245, 158, 11, 0.2);
 }
 
-/* Iconos de marcas con micro-efectos */
 .brand-icons i{
 transition: all 0.3s ease;
 cursor: pointer;
@@ -756,12 +655,10 @@ transform: scale(1.2) translateY(-5px);
 filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.6));
 }
 
-/* Mejoras visuales generales de la paleta */
 section:nth-child(even){
 background: linear-gradient(180deg, #0A0A0A 0%, #0F0F0F 50%, #0A0A0A 100%);
 }
 
-/* Contenedor de reflejo para hero logo */
 .hero-logo-wrapper{
 position: relative;
 display: inline-flex;
@@ -769,7 +666,6 @@ align-items: center;
 margin-left: 1.5rem;
 }
 
-/* Overlay de color sutil en secciones para cohesión */
 section::before{
 content: '';
 position: absolute;
@@ -782,7 +678,6 @@ pointer-events: none;
 z-index: 0;
 }
 
-/* Mejora de tipografía del taller */
 .main-title{
 font-weight: 900;
 letter-spacing: -0.03em;
@@ -791,6 +686,95 @@ letter-spacing: -0.03em;
 font-weight: 900;
 text-shadow: 0 0 25px rgba(245, 158, 11, 0.7), 0 0 50px rgba(251, 191, 36, 0.4);
 }
+
+/* ========== TARJETA UBICACIÓN MEJORADA ========== */
+.location-card{
+background: linear-gradient(160deg, rgba(38,38,38,0.95) 0%, rgba(26,26,26,0.98) 50%, rgba(18,18,18,0.95) 100%);
+backdrop-filter: blur(20px);
+border: 1px solid rgba(245, 158, 11, 0.2);
+border-radius: 24px;
+transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+overflow: hidden;
+position: relative;
+}
+.location-card::before{
+content:'';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 3px;
+background: linear-gradient(90deg, transparent, #F59E0B, #FBBF24, #F59E0B, transparent);
+opacity: 0.8;
+}
+.location-card:hover{
+border-color: rgba(245, 158, 11, 0.45);
+transform: translateY(-4px);
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(245, 158, 11, 0.15);
+}
+.location-icon-circle{
+width: 56px;
+height: 56px;
+border-radius: 50%;
+background: linear-gradient(135deg, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0.05) 100%);
+border: 1.5px solid rgba(245,158,11,0.3);
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 1rem auto;
+transition: all 0.3s ease;
+}
+.location-card:hover .location-icon-circle{
+background: linear-gradient(135deg, rgba(245,158,11,0.25) 0%, rgba(245,158,11,0.1) 100%);
+border-color: rgba(245,158,11,0.5);
+transform: scale(1.05);
+box-shadow: 0 0 20px rgba(245,158,11,0.2);
+}
+.location-info-item{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+padding: 0.75rem 0;
+border-bottom: 1px solid rgba(255,255,255,0.05);
+transition: background 0.3s ease;
+}
+.location-info-item:last-child{
+border-bottom: none;
+padding-bottom: 0;
+}
+.location-info-item:hover{
+background: rgba(245,158,11,0.05);
+border-radius: 12px;
+}
+.location-info-icon{
+flex-shrink: 0;
+width: 40px;
+height: 40px;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.1rem;
+transition: all 0.3s ease;
+}
+.location-info-text{
+text-align: center;
+}
+.location-info-label{
+font-size: 0.7rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.08em;
+color: rgba(245,158,11,0.7);
+margin-bottom: 0.15rem;
+}
+.location-info-value{
+font-size: 0.9rem;
+font-weight: 500;
+color: #E2E8F0;
+}
+/* ========== FIN TARJETA UBICACIÓN ========== */
 </style>
 </head>
 <body class="antialiased relative">
@@ -816,20 +800,15 @@ text-shadow: 0 0 25px rgba(245, 158, 11, 0.7), 0 0 50px rgba(251, 191, 36, 0.4);
 </div>
 <!-- ========== FIN BANNER INFORMATIVO ========== -->
 
-<!-- Partículas decorativas de fondo-->
 <div class="particles" id="particles"></div>
 
-<!-- NAVBAR-->
 <nav class="fixed w-full z-50 glass border-b border-white/10 transition-all duration-300" id="navbar">
 <div class="container mx-auto px-4 h-16 md:h-20 flex items-center relative">
-<!-- LOGO RECTANGULAR -->
 <a href="#" class="flex items-center md:absolute md:left-4 md:translate-x-0">
 <img src="TALLERTR.png" alt="Taller Mecánico TR Logo" class="navbar-logo">
 </a>
-<!-- Título centrado -->
 <a href="#" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 md:ml-auto md:mr-auto font-display font-bold text-lg sm:text-xl md:text-2xl gradient-text tracking-tight uppercase text-center md:text-left drop-shadow-lg main-title" data-es="Taller Mecánico TR" data-en="Taller Mecánico TR">Taller Mecánico TR</a>
 <div class="ml-auto flex items-center gap-2 md:gap-3">
-<!-- Language Switcher -->
 <button id="langToggle" class="lang-switcher flex items-center gap-2 order-2 md:order-3"><i class="fa-solid fa-language"></i><span id="langText">EN</span></button>
 <div id="status-badge-desktop" class="hidden md:flex items-center px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs font-semibold uppercase tracking-wide bg-white/5 border border-white/10 hover:border-primary-green/40 transition-all order-4">
 <span id="status-dot-desktop" class="status-dot w-2 h-2 rounded-full mr-2.5 bg-primary-green"></span>
@@ -844,25 +823,20 @@ text-shadow: 0 0 25px rgba(245, 158, 11, 0.7), 0 0 50px rgba(251, 191, 36, 0.4);
 <div id="status-bar-mobile" class="md:hidden w-full py-2 text-center text-xs font-bold uppercase tracking-wide text-white bg-gradient-to-r from-primary-green/20 to-green-700/20" data-es="🟢 Abierto - Atención Profesional" data-en="🟢 Open - Professional Service">🟢 Abierto - Atención Profesional</div>
 </nav>
 
-<!-- Botones flotantes premium -->
 <div class="fixed bottom-24 md:bottom-8 right-4 z-50 animate-float flex flex-col gap-3">
-<!-- WhatsApp directo -->
 <a href="https://api.whatsapp.com/send?phone=542995570772" target="_blank" rel="noopener noreferrer"
 class="bg-[#25D366] hover:bg-[#128C7E] text-white p-3.5 md:p-4 rounded-full shadow-lg transition-all hover:scale-110 flex items-center justify-center gap-2 group"
 title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinite;">
 <i class="fa-brands fa-whatsapp text-2xl md:text-3xl"></i><span class="hidden lg:inline text-xs font-bold whitespace-nowrap">Chat</span>
 </a>
-<!-- Pedir Turno -->
 <a href="#diagnostico" class="btn-primary px-5 py-3 md:px-7 md:py-3.5 rounded-2xl shadow-neon transition flex items-center gap-2.5 hover:shadow-glow text-sm font-semibold group">
 <i class="fa-solid fa-calendar-check text-lg"></i><span class="hidden xs:inline" data-es="Pedir Turno" data-en="Book Appointment">Pedir Turno</span><i class="fa-solid fa-arrow-right ml-1 group-hover:translate-x-1 transition-transform"></i>
 </a>
-<!-- Botón de Reseñas -->
 <a href="https://maps.app.goo.gl/GeWiYxvDSCN3ZDEo9" target="_blank" rel="noopener noreferrer" class="btn-review px-4 py-2.5 md:px-5 md:py-3 rounded-xl shadow-lg transition flex items-center gap-2 text-xs md:text-sm font-semibold group animate-float" style="animation-delay: 0.5s;">
 <i class="fa-solid fa-star text-lg"></i><span class="hidden xs:inline" data-es="Deja tu Reseña" data-en="Leave Review">Deja tu Reseña</span>
 </a>
 </div>
 
-<!-- HERO SECTION-->
 <header class="relative pt-20 pb-20 md:pt-28 md:pb-28 lg:pt-36 lg:pb-32 min-h-screen flex items-center overflow-hidden">
 <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-[#0F0F0F] to-[#0A0A0A]">
 <div class="absolute inset-0 opacity-25" style="background-image: radial-gradient(circle at 20% 35%, rgba(245, 158, 11, 0.2) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(251, 191, 36, 0.18) 0%, transparent 45%)"></div>
@@ -894,7 +868,6 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
    Llegá con la tranquilidad de saber qué necesita tu vehículo y ahorrá tiempo en cada visita.
 </p>
 
-<!-- Stats animados-->
 <div class="grid grid-cols-3 gap-3 md:gap-5 pt-2 md:pt-4 fade-in-up" style="animation-delay: 0.5s;">
 <div class="text-center p-3 rounded-xl bg-white/5 border border-white/10 hover:border-primary-green/30 transition">
 <span class="block text-2xl md:text-3xl font-bold gradient-text"><span id="counter1" data-target="99">0</span>%</span><span class="text-xs text-gray-400 mt-1 block" data-es="Precisión" data-en="Accuracy">Precisión</span>
@@ -906,7 +879,6 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 <span class="block text-2xl md:text-3xl font-bold gradient-text"><span id="counter3" data-target="8000">0</span>+</span><span class="text-xs text-gray-400 mt-1 block" data-es="Vehículos" data-en="Vehicles">Vehículos</span>
 </div>
 </div>
-<!-- CTAs-->
 <div class="flex flex-col sm:flex-row gap-3.5 pt-2 fade-in-up" style="animation-delay: 0.6s;">
 <a href="#diagnostico" class="btn-primary px-6 py-3.5 rounded-xl uppercase tracking-wide flex items-center justify-center gap-2.5 group text-sm font-semibold shadow-neon">
 <span data-es="Iniciar Diagnóstico" data-en="Start Diagnosis">Iniciar Diagnóstico</span><i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
@@ -922,7 +894,6 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 </div>
 </header>
 
-<!-- SECCIÓN: CENTRO DE ASESORAMIENTO-->
 <section id="asesoramiento" class="py-16 md:py-24 bg-[#0F0F0F] relative">
 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(34,197,94,0.08),_transparent_60%)]"></div>
 <div class="container mx-auto px-4 relative z-10">
@@ -934,7 +905,6 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 <p class="text-gray-400/90 max-w-2xl mx-auto text-base md:text-lg leading-relaxed" data-es="Detecta fallas en etapas tempranas y evita reparaciones costosas. Aprende a identificar las señales clave de tu vehículo." data-en="Detect failures at early stages and avoid expensive repairs. Learn to identify the key signals of your vehicle.">Detecta fallas en etapas tempranas y evita reparaciones costosas. Aprende a identificar las señales clave de tu vehículo.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-7">
-<!-- Card 1-->
 <div class="glass-card hover-lift">
 <div class="relative h-44 md:h-48 overflow-hidden rounded-t-2xl">
 <img src="https://placehold.co/600x400/22C55E/0A0A0A?text=FRENOS" alt="Sistema de frenos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
@@ -947,7 +917,6 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 <a href="#diagnostico" class="text-primary-green hover:text-green-300 font-semibold text-sm flex items-center gap-1.5 group"><span data-es="Analizar ahora" data-en="Analyze now">Analizar ahora</span><i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i></a>
 </div>
 </div>
-<!-- Card 2-->
 <div class="glass-card hover-lift">
 <div class="relative h-44 md:h-48 overflow-hidden rounded-t-2xl">
 <img src="https://placehold.co/600x400/262626/22C55E?text=BATERIA" alt="Sistema eléctrico" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
@@ -960,7 +929,6 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 <a href="#diagnostico" class="text-primary-green hover:text-green-300 font-semibold text-sm flex items-center gap-1.5 group"><span data-es="Verificar sistema" data-en="Check system">Verificar sistema</span><i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i></a>
 </div>
 </div>
-<!-- Card 3-->
 <div class="glass-card hover-lift">
 <div class="relative h-44 md:h-48 overflow-hidden rounded-t-2xl">
 <img src="https://placehold.co/600x400/16A34A/0A0A0A?text=FLUIDOS" alt="Fluidos críticos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
@@ -982,7 +950,6 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 </div>
 </section>
 
-<!-- SECCIÓN: SERVICIOS INTEGRALES-->
 <section class="py-16 md:py-24 bg-primary-dark relative">
 <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(circle at 10% 20%, rgba(34, 197, 94, 0.1) 0%, transparent 25%), radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 25%)"></div>
 <div class="container mx-auto px-4 relative z-10">
@@ -1028,7 +995,6 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 </div>
 </section>
 
-<!-- SECCIÓN: TESTIMONIOS-->
 <section class="py-16 md:py-24 bg-[#0F0F0F] border-t border-white/5">
 <div class="container mx-auto px-4">
 <div class="text-center mb-10 md:mb-14">
@@ -1059,12 +1025,10 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 </div>
 </section>
 
-<!-- SECCIÓN: FORMULARIO DE DIAGNÓSTICO-->
 <section id="diagnostico" class="py-16 md:py-24 bg-gradient-to-b from-primary-dark to-[#080808] relative overflow-hidden">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_60%_40%,rgba(34,197,94,0.08),transparent_55%)]"></div>
 <div class="container mx-auto px-4 relative z-10">
 <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-<!-- Columna informativa-->
 <div class="lg:w-1/3 space-y-6">
 <h2 class="font-display font-bold text-4xl md:text-5xl text-white mb-2 glow-text tracking-tight">
 <span data-es="ACELERADOR DE<br>DIAGNÓSTICO" data-en="DIAGNOSIS<br>ACCELERATOR">ACELERADOR DE<br><span class="gradient-text">DIAGNÓSTICO</span></span>
@@ -1080,7 +1044,6 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 <div><p class="text-sm font-semibold text-white" data-es="Datos 100% seguros" data-en="100% secure data">Datos 100% seguros</p><p class="text-xs text-gray-500" data-es="Tu información está protegida" data-en="Your information is protected">Tu información está protegida</p></div>
 </div>
 </div>
-<!-- Formulario-->
 <div class="lg:w-2/3 glass-card rounded-3xl shadow-card p-6 md:p-8 w-full">
 <form id="triageForm" class="space-y-7">
 <div class="border-b border-white/10 pb-5">
@@ -1171,9 +1134,11 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 </div>
 </section>
 
-<!-- SECCIÓN: UBICACIÓN Y CONFIANZA -->
-<section class="py-14 md:py-20 bg-[#0F0F0F] border-t border-white/5">
-<div class="container mx-auto px-4 text-center">
+<!-- ===== SECCIÓN: UBICACIÓN Y CONFIANZA ===== -->
+<section class="py-14 md:py-20 bg-[#0F0F0F] border-t border-white/5 relative">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center_bottom,_rgba(245,158,11,0.06),_transparent_70%)]"></div>
+<div class="container mx-auto px-4 relative z-10 text-center">
+<!-- Marcas -->
 <div class="flex flex-wrap justify-center gap-8 md:gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-500 mb-12 md:mb-16 brand-icons">
 <i class="fa-brands fa-toyota text-4xl md:text-5xl hover:text-white transition-colors"></i>
 <i class="fa-solid fa-car text-4xl md:text-5xl hover:text-white transition-colors"></i>
@@ -1182,43 +1147,72 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 <i class="fa-brands fa-volkswagen text-4xl md:text-5xl hover:text-white transition-colors"></i>
 <i class="fa-solid fa-truck-pickup text-4xl md:text-5xl hover:text-white transition-colors"></i>
 </div>
-<div class="glass-card rounded-3xl p-6 md:p-10 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
-<div class="text-left max-w-md">
-<h3 class="font-display font-bold text-2xl md:text-3xl text-white mb-2" data-es="¿Dónde estamos?" data-en="Where are we?">¿Dónde estamos?</h3>
-<p class="text-gray-400/90 mb-4 text-base" data-es="Visítanos para validación final y reparaciones especializadas." data-en="Visit us for final validation and specialized repairs.">Visítanos para validación final y reparaciones especializadas.</p>
-<div class="flex items-start gap-3 text-gray-300/90 text-sm mb-2">
-<i class="fa-regular fa-location-dot text-primary-green text-xl mt-0.5 flex-shrink-0"></i>
-<div><p class="font-medium">Dirección:</p><p>8324, Cipolletti, Río Negro</p></div>
+
+<!-- TARJETA UBICACIÓN - CENTRADA Y MEJORADA -->
+<div class="location-card p-8 md:p-12 max-w-2xl mx-auto text-center">
+<!-- Icono principal centrado -->
+<div class="location-icon-circle">
+<i class="fa-solid fa-location-dot text-2xl text-[#F59E0B]"></i>
 </div>
-<div class="flex items-start gap-3 text-gray-300/90 text-sm mb-2">
-<i class="fa-brands fa-whatsapp text-primary-green text-xl mt-0.5 flex-shrink-0"></i>
-<div><p class="font-medium">WhatsApp:</p><p dir="ltr">0299 557 0772</p></div>
+<!-- Título centrado -->
+<h3 class="font-display font-bold text-2xl md:text-3xl text-white mb-2 glow-text">¿Dónde estamos?</h3>
+<p class="text-gray-400/90 mb-8 text-sm md:text-base">Visítanos para validación final y reparaciones especializadas.</p>
+
+<!-- Info items centrados -->
+<div class="space-y-1 mb-8">
+<div class="location-info-item">
+<div class="location-info-icon bg-primary-green/10 text-primary-green">
+<i class="fa-solid fa-location-dot"></i>
 </div>
-<div class="flex items-start gap-3 text-gray-300/90 text-sm mb-2">
-<i class="fa-regular fa-clock text-primary-green text-xl mt-0.5 flex-shrink-0"></i>
-<div><p class="font-medium" data-es="Horarios de atención:" data-en="Business hours:">Horarios de atención:</p>
-<p class="font-bold text-primary-green">
-<span data-es="Lun-Vie: 09:00-18:00 | Sáb: 09:00-13:00 | Dom: Cerrado" data-en="Mon-Fri: 9AM-6PM | Sat: 9AM-1PM | Sun: Closed">Lun-Vie: 09:00-18:00 | Sáb: 09:00-13:00 | Dom: Cerrado</span>
+<div class="location-info-text">
+<p class="location-info-label">Dirección</p>
+<p class="location-info-value">8324, Cipolletti, Río Negro</p>
+</div>
+</div>
+<div class="location-info-item">
+<div class="location-info-icon bg-green-500/10 text-green-400">
+<i class="fa-brands fa-whatsapp"></i>
+</div>
+<div class="location-info-text">
+<p class="location-info-label">WhatsApp</p>
+<p class="location-info-value">0299 557 0772</p>
+</div>
+</div>
+<div class="location-info-item">
+<div class="location-info-icon bg-[#F59E0B]/10 text-[#F59E0B]">
+<i class="fa-regular fa-clock"></i>
+</div>
+<div class="location-info-text">
+<p class="location-info-label">Horarios de Atención</p>
+<p class="location-info-value font-semibold text-primary-green">
+Lun-Vie: 09:00-18:00 | Sáb: 09:00-13:00 | Dom: Cerrado
 </p>
 </div>
 </div>
 </div>
-<div class="flex flex-col sm:flex-row gap-3 mt-8">
-<a href="https://maps.app.goo.gl/GeWiYxvDSCN3ZDEo9" target="_blank" rel="noopener noreferrer" class="btn-primary px-6 py-3.5 md:px-8 md:py-4 rounded-2xl font-bold hover:shadow-neon transition flex items-center gap-3 text-sm md:text-base whitespace-nowrap shadow-soft">
-<i class="fa-solid fa-map-location-dot text-lg"></i><span data-es="Ver en Google Maps" data-en="View on Google Maps">Ver en Google Maps</span>
+
+<!-- Botones de acción centrados -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
+<a href="https://maps.app.goo.gl/GeWiYxvDSCN3ZDEo9" target="_blank" rel="noopener noreferrer" class="btn-primary px-6 py-3.5 rounded-2xl font-bold transition hover:shadow-neon flex items-center gap-2.5 text-sm md:text-base shadow-soft w-full sm:w-auto justify-center">
+<i class="fa-solid fa-map-location-dot text-lg"></i>
+<span>Ver en Google Maps</span>
 </a>
-<a href="https://maps.app.goo.gl/GeWiYxvDSCN3ZDEo9" target="_blank" rel="noopener noreferrer" class="btn-review px-6 py-3.5 md:px-8 md:py-4 rounded-2xl font-bold hover:shadow-neon transition flex items-center gap-3 text-sm md:text-base whitespace-nowrap shadow-soft">
-<i class="fa-solid fa-star text-lg"></i><span data-es="Deja tu Reseña" data-en="Leave Review">Deja tu Reseña</span>
+<a href="https://maps.app.goo.gl/GeWiYxvDSCN3ZDEo9" target="_blank" rel="noopener noreferrer" class="btn-review px-6 py-3.5 rounded-2xl font-bold transition hover:shadow-neon flex items-center gap-2.5 text-sm md:text-base shadow-soft w-full sm:w-auto justify-center">
+<i class="fa-solid fa-star text-lg"></i>
+<span>Deja tu Reseña</span>
 </a>
 </div>
-<div class="mt-10 inline-flex items-center gap-3 bg-white/5 border border-white/10 px-5 py-3 rounded-full">
-<i class="fa-solid fa-certificate text-primary-green text-lg"></i>
-<span class="text-sm font-medium text-gray-300" data-es="Garantía en todos nuestros servicios" data-en="Warranty on all our services">Garantía en todos nuestros servicios</span>
+
+<!-- Badge garantía centrado -->
+<div class="inline-flex items-center gap-2.5 bg-white/5 border border-white/10 hover:border-[#F59E0B]/30 px-5 py-2.5 rounded-full transition-all">
+<i class="fa-solid fa-certificate text-[#F59E0B] text-lg"></i>
+<span class="text-sm font-medium text-gray-300">Garantía en todos nuestros servicios</span>
 </div>
+</div>
+
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="bg-primary-dark/95 text-gray-500 py-10 md:py-14 border-t border-white/10">
 <div class="container mx-auto px-4">
 <div class="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -1246,7 +1240,6 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 </div>
 </footer>
 
-<!-- STICKY MOBILE CTA-->
 <div class="fixed bottom-0 left-0 w-full bg-gray-900/95 backdrop-blur-sm border-t border-white/10 p-4 md:hidden z-50 flex gap-3">
 <a href="#asesoramiento" class="flex-1 bg-white/5 text-white font-semibold py-3.5 rounded-xl text-center border border-white/10 hover:border-primary-green/40 transition text-sm flex items-center justify-center gap-2">
 <i class="fa-solid fa-book-open text-primary-green"></i><span data-es="Guías" data-en="Guides">Guías</span>
@@ -1256,10 +1249,8 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 </a>
 </div>
 
-<!-- JAVASCRIPT FUNCIONAL -->
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
-// Language Switcher
 let currentLang='es';
 const langToggle= document.getElementById('langToggle');
 const langText= document.getElementById('langText');
@@ -1278,7 +1269,6 @@ langText.textContent= lang=== 'es' ? 'EN' : 'ES';
 }
 langToggle?.addEventListener('click',()=>{ const newLang= currentLang=== 'es' ? 'en' : 'es'; translatePage(newLang); });
 
-// Partículas decorativas con micro-interacciones
 function createParticles(){
 const container= document.getElementById('particles');
 if(!container) return;
@@ -1294,7 +1284,6 @@ container.appendChild(particle);
 }
 createParticles();
 
-// Estado de apertura - Horarios reales
 function checkStatus(){
 const dotDesktop= document.getElementById('status-dot-desktop');
 const textDesktop= document.getElementById('status-text-desktop');
@@ -1304,11 +1293,9 @@ const day = now.getDay();
 const hour = now.getHours();
 const minutes = now.getMinutes();
 const currentTime = hour * 60 + minutes;
-
 let isOpen = false;
 if(day >= 1 && day <= 5){ isOpen = currentTime >= 540 && currentTime < 1080; } 
 else if(day === 6){ isOpen = currentTime >= 540 && currentTime < 780; }
-
 if(isOpen){
 dotDesktop.className='status-dot w-2 h-2 rounded-full mr-2.5 bg-primary-green';
 textDesktop.textContent= currentLang=== 'es' ? 'Abierto' : 'Open';
@@ -1324,7 +1311,6 @@ barMobile.className='md:hidden w-full py-2 text-center text-xs font-bold upperca
 }
 }
 
-// Animación de contadores
 function animateCounter(id, start, target, duration) {
 const obj = document.getElementById(id);
 if (!obj) return;
@@ -1355,7 +1341,6 @@ const statsSection = document.querySelector('.grid.grid-cols-3');
 if (statsSection) observer.observe(statsSection);
 }
 
-// Validación de inputs con micro-efectos
 const inputs= document.querySelectorAll('.input-modern');
 inputs.forEach(input=>{
 input.addEventListener('input', function(){
@@ -1374,7 +1359,6 @@ this.style.animation = 'shake 0.5s ease-in-out';
 });
 });
 
-// Formulario principal
 document.getElementById('triageForm')?.addEventListener('submit',(e)=>{
 e.preventDefault();
 const btn= e.target.querySelector('button[type="submit"]');
@@ -1390,17 +1374,7 @@ const contextSelect= document.getElementById('inputContext');
 const context= contextSelect.options[contextSelect.selectedIndex]?.text||'No especificado';
 const name= document.getElementById('inputName').value||'Cliente';
 const phone= document.getElementById('inputPhone').value||'No proporcionado';
-const message=`🚗 *¡Hola Taller Mecánico TR!* 👋
-*Cliente:* ${name}
-📱 *Contacto:* ${phone}
-🚘 *Tipo de Vehículo:* ${vehicleType}
-*Vehículo:* ${vehicle}
-🛣 *Kilometraje:* ${km} km
-⛽ *Combustible:* ${fuelType}
-⚠ *Síntomas reportados:*
-${symptoms}
-🔍 *Contexto:* ${context}
-📅 *Solicito turno para diagnóstico profesional.* 💨`;
+const message=`🚗 *¡Hola Taller Mecánico TR!* 👋\n*Cliente:* ${name}\n📱 *Contacto:* ${phone}\n🚘 *Tipo de Vehículo:* ${vehicleType}\n*Vehículo:* ${vehicle}\n🛣 *Kilometraje:* ${km} km\n⛽ *Combustible:* ${fuelType}\n⚠ *Síntomas reportados:*\n${symptoms}\n🔍 *Contexto:* ${context}\n📅 *Solicito turno para diagnóstico profesional.* 💨`;
 const whatsappUrl=`https://api.whatsapp.com/send?phone=542995570772&text=${encodeURIComponent(message)}`;
 setTimeout(()=>{
 window.open(whatsappUrl,'_blank','noopener,noreferrer');
@@ -1416,7 +1390,6 @@ document.querySelectorAll('.input-modern').forEach(el=>{ el.classList.remove('in
 }, 1200);
 });
 
-// Parallax con micro-suavizado
 const parallaxImg= document.getElementById('parallax-img');
 if(parallaxImg){
 let ticking = false;
@@ -1434,7 +1407,6 @@ ticking = true;
 },{passive: true});
 }
 
-// Navbar scroll effect
 const navbar= document.getElementById('navbar');
 if(navbar){
 window.addEventListener('scroll',()=>{
@@ -1443,19 +1415,16 @@ else{ navbar.classList.remove('shadow-lg','bg-gray-900/95'); navbar.classList.ad
 },{passive: true});
 }
 
-// Micro-efecto: hover en enlaces del navbar
 document.querySelectorAll('nav a[href^="#"]').forEach(link => {
 link.addEventListener('mouseenter', function(){ this.style.animation = 'micro-bounce 0.3s ease'; });
 link.addEventListener('animationend', function(){ this.style.animation = ''; });
 });
 
-// Inicialización
 checkStatus();
 setInterval(checkStatus, 60000);
 startCounters();
 document.querySelectorAll('.fade-in-up').forEach((el, i)=>{ el.style.animationDelay=`${0.1+ i*0.12}s`; });
 
-// Smooth scroll con micro-efecto
 document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
 anchor.addEventListener('click', function(e){
 e.preventDefault();
@@ -1469,7 +1438,6 @@ window.scrollTo({ top: targetElement.offsetTop-80, behavior:'smooth' });
 });
 });
 
-// Micro-efecto: partículas siguen sutilmente el cursor
 let particleFollow = false;
 document.addEventListener('mousemove', (e) => {
 if(!particleFollow && Math.random() > 0.95){
