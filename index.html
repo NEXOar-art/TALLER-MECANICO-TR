@@ -64,8 +64,6 @@ animation:{
 'micro-bounce':'micro-bounce 0.6s ease-in-out',
 'micro-tilt':'micro-tilt 0.3s ease-out',
 'shimmer':'shimmer 2.5s infinite linear',
-'typewriter':'typewriter 2.5s steps(40, end) 3s forwards',
-'cursor-blink':'cursor-blink 0.7s step-end infinite 5.5s',
 },
 keyframes:{
 float:{
@@ -89,15 +87,6 @@ float:{
 shimmer:{
 '0%':{backgroundPosition:'-200% 0'},
 '100%':{backgroundPosition:'200% 0'}
-},
-typewriter:{
-'0%':{width:'0', opacity:'0'},
-'10%':{opacity:'1'},
-'100%':{width:'100%', opacity:'1'}
-},
-'cursor-blink':{
-'0%, 100%':{borderColor:'transparent'},
-'50%':{borderColor:'#F59E0B'}
 }
 }
 }
@@ -510,11 +499,15 @@ transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 position: relative;
 overflow: visible;
 background: rgba(10, 10, 10, 0.4);
+padding: 6px;
 }
 
 /* Imagen del logo navbar con bordes redondeados */
 .navbar-logo img{
-border-radius: 14px;
+border-radius: 10px;
+width: 100%;
+height: 100%;
+object-fit: contain;
 }
 
 /* Efecto de brillo/reflejo superior en logo navbar */
@@ -563,23 +556,27 @@ opacity: 0.85;
 animation: shimmer 2s ease-in-out infinite;
 }
 
-/* Hero Logo - RECTANGULAR CON BORDES REDONDEADOS (para posicionar junto al título) */
+/* Hero Logo - RECTANGULAR CON BORDES REDONDEADOS (AGRANDADO) */
 .hero-logo{
-height: 5.5rem;
-width: 12rem;
+height: 7rem;
+width: 16rem;
 object-fit: contain;
-border-radius: 16px;
-border: 3px solid rgba(245, 158, 11, 0.95);
-box-shadow: 0 0 35px rgba(245, 158, 11, 0.65), 0 0 70px rgba(245, 158, 11, 0.35), inset 0 0 18px rgba(245, 158, 11, 0.2);
+border-radius: 20px;
+border: 3.5px solid rgba(245, 158, 11, 0.95);
+box-shadow: 0 0 40px rgba(245, 158, 11, 0.65), 0 0 80px rgba(245, 158, 11, 0.35), inset 0 0 20px rgba(245, 158, 11, 0.2);
 transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 position: relative;
 overflow: visible;
 background: rgba(10, 10, 10, 0.3);
+padding: 12px;
 }
 
 /* Imagen del logo hero con bordes redondeados */
 .hero-logo img{
 border-radius: 14px;
+width: 100%;
+height: 100%;
+object-fit: contain;
 }
 
 /* Efecto de brillo/reflejo superior en logo hero */
@@ -591,7 +588,7 @@ left: 8%;
 width: 45%;
 height: 32%;
 background: linear-gradient(160deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 40%, transparent 70%);
-border-radius: 12px;
+border-radius: 14px;
 filter: blur(3px);
 opacity: 0;
 transition: opacity 0.3s ease;
@@ -629,15 +626,15 @@ animation: shimmer 2.2s ease-in-out infinite;
 
 /* Responsive logos rectangulares */
 @media(max-width: 768px){ 
-    .navbar-logo{height: 50px; width: 110px; border-width: 2px; border-radius: 14px;} 
-    .hero-logo{height: 4rem; width: 9rem; border-radius: 14px;}
-    .navbar-logo img{ border-radius: 12px; }
+    .navbar-logo{height: 50px; width: 110px; border-width: 2px; border-radius: 14px; padding: 5px;} 
+    .navbar-logo img{ border-radius: 9px; }
+    .hero-logo{height: 5.5rem; width: 13rem; border-radius: 16px; padding: 10px;}
     .hero-logo img{ border-radius: 12px; }
 }
 @media(max-width: 475px){
-    .navbar-logo{height: 44px; width: 95px; border-radius: 12px;}
-    .hero-logo{height: 3.5rem; width: 8rem; border-radius: 12px;}
-    .navbar-logo img{ border-radius: 10px; }
+    .navbar-logo{height: 44px; width: 95px; border-radius: 12px; padding: 4px;}
+    .navbar-logo img{ border-radius: 8px; }
+    .hero-logo{height: 4.5rem; width: 10rem; border-radius: 14px; padding: 8px;}
     .hero-logo img{ border-radius: 10px; }
 }
 /* ========== FIN LOGO RECTANGULAR CON REFLEJO ========== */
@@ -720,43 +717,6 @@ letter-spacing: -0.03em;
 font-weight: 900;
 text-shadow: 0 0 25px rgba(245, 158, 11, 0.7), 0 0 50px rgba(251, 191, 36, 0.4);
 }
-
-/* ========== EFECTO TYPEWRITER PARA DESCRIPCIÓN ========== */
-.description-text{
-opacity: 0;
-white-space: pre-line;
-overflow: hidden;
-border-right: 3px solid #F59E0B;
-width: 0;
-animation: typewriter 2.5s steps(40, end) 3s forwards, cursor-blink 0.7s step-end infinite 5.5s;
-}
-.description-text.typing-complete{
-border-right: none;
-animation: none;
-opacity: 1;
-width: 100%;
-}
-@keyframes typewriter{
-0%{ width: 0; opacity: 0; }
-10%{ opacity: 1; }
-100%{ width: 100%; opacity: 1; }
-}
-@keyframes cursor-blink{
-0%, 100%{ border-color: transparent; }
-50%{ border-color: #F59E0B; }
-}
-/* Responsive para typewriter */
-@media(max-width: 768px){
-.description-text{
-animation: typewriter 3s steps(35, end) 3s forwards, cursor-blink 0.7s step-end infinite 6s;
-}
-}
-@media(max-width: 475px){
-.description-text{
-animation: typewriter 3.5s steps(30, end) 3s forwards, cursor-blink 0.7s step-end infinite 6.5s;
-}
-}
-/* ========== FIN EFECTO TYPEWRITER ========== */
 </style>
 </head>
 <body class="antialiased relative">
@@ -851,7 +811,7 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 </div>
 </h1>
 
-<p class="description-text text-gray-300/90 text-base md:text-lg max-w-xl leading-relaxed" style="animation-delay: 0.3s;" 
+<p class="text-gray-300/90 text-base md:text-lg max-w-xl description-text fade-in-up leading-relaxed" style="animation-delay: 0.3s;" 
    data-es="Tu auto tiene algo que decir. Nosotros lo interpretamos con tecnología avanzada. Cargá los síntomas en segundos y obtené un diagnóstico claro y confiable antes de llegar al taller. Llegá con la tranquilidad de saber qué necesita tu vehículo y ahorrá tiempo en cada visita." 
    data-en="Your car has something to say. We interpret it with advanced technology. Load symptoms in seconds and get a clear, reliable diagnosis before arriving. Arrive with peace of mind knowing what your vehicle needs and save time on every visit.">
    Tu auto tiene algo que decir.<br>
