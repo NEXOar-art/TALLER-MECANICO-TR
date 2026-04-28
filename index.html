@@ -114,7 +114,6 @@ position: relative;
 padding-top: 56px;
 }
 
-/* ========== BANNER INFORMATIVO - SIEMPRE VISIBLE ========== */
 .info-banner{
 position: fixed;
 top: 0;
@@ -234,7 +233,6 @@ body{ padding-top: 50px; }
 body{ padding-top: 46px; }
 #navbar{ top: 46px !important; }
 }
-/* ========== FIN BANNER INFORMATIVO ========== */
 
 body::before{
 content:'';
@@ -469,7 +467,6 @@ box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
 .label-below span.required{ color: #EF4444; margin-left: 2px; }
 .input-modern:focus + .label-below{ color: #FBBF24; transform: translateX(4px); }
 
-/* ========== LOGO RECTANGULAR RESPONSIVO ========== */
 .navbar-logo{
 height: 62px;
 width: 140px;
@@ -615,7 +612,6 @@ box-shadow: 0 0 50px rgba(245, 158, 11, 0.9), 0 0 90px rgba(245, 158, 11, 0.45),
     .navbar-logo{height: 36px; width: 80px; padding: 4px;}
     .hero-logo{height: 3.5rem; width: 8.5rem; padding: 7px;}
 }
-/* ========== FIN LOGO RECTANGULAR RESPONSIVO ========== */
 
 .lang-switcher{
 background: rgba(245, 158, 11, 0.18); border: 2px solid rgba(245, 158, 11, 0.45);
@@ -687,7 +683,6 @@ font-weight: 900;
 text-shadow: 0 0 25px rgba(245, 158, 11, 0.7), 0 0 50px rgba(251, 191, 36, 0.4);
 }
 
-/* ========== TARJETA UBICACIÓN MEJORADA ========== */
 .location-card{
 background: linear-gradient(160deg, rgba(38,38,38,0.95) 0%, rgba(26,26,26,0.98) 50%, rgba(18,18,18,0.95) 100%);
 backdrop-filter: blur(20px);
@@ -774,12 +769,32 @@ font-size: 0.9rem;
 font-weight: 500;
 color: #E2E8F0;
 }
-/* ========== FIN TARJETA UBICACIÓN ========== */
+
+/* ========== BOTONES FUNCIONALES EN FOOTER ========== */
+.footer-btn{
+display: inline-flex;
+align-items: center;
+gap: 5px;
+color: #22C55E;
+transition: all 0.3s ease;
+cursor: pointer;
+text-decoration: none;
+}
+.footer-btn:hover{
+color: #F59E0B;
+transform: scale(1.05);
+}
+.footer-btn:hover .footer-btn-icon{
+transform: scale(1.15);
+}
+.footer-btn-icon{
+transition: transform 0.3s ease;
+}
+/* ========== FIN BOTONES FUNCIONALES EN FOOTER ========== */
 </style>
 </head>
 <body class="antialiased relative">
 
-<!-- ========== BANNER INFORMATIVO - SIEMPRE VISIBLE ========== -->
 <div class="info-banner" id="infoBanner">
 <div class="info-banner-wrapper">
 <div class="info-banner-icon"><i class="fa-solid fa-lightbulb"></i></div>
@@ -798,7 +813,6 @@ color: #E2E8F0;
 </div>
 </div>
 </div>
-<!-- ========== FIN BANNER INFORMATIVO ========== -->
 
 <div class="particles" id="particles"></div>
 
@@ -1134,11 +1148,9 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 </div>
 </section>
 
-<!-- ===== SECCIÓN: UBICACIÓN Y CONFIANZA ===== -->
 <section class="py-14 md:py-20 bg-[#0F0F0F] border-t border-white/5 relative">
 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center_bottom,_rgba(245,158,11,0.06),_transparent_70%)]"></div>
 <div class="container mx-auto px-4 relative z-10 text-center">
-<!-- Marcas -->
 <div class="flex flex-wrap justify-center gap-8 md:gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-500 mb-12 md:mb-16 brand-icons">
 <i class="fa-brands fa-toyota text-4xl md:text-5xl hover:text-white transition-colors"></i>
 <i class="fa-solid fa-car text-4xl md:text-5xl hover:text-white transition-colors"></i>
@@ -1148,17 +1160,13 @@ title="Chat directo por WhatsApp" style="animation: float 6s ease-in-out infinit
 <i class="fa-solid fa-truck-pickup text-4xl md:text-5xl hover:text-white transition-colors"></i>
 </div>
 
-<!-- TARJETA UBICACIÓN - CENTRADA Y MEJORADA -->
 <div class="location-card p-8 md:p-12 max-w-2xl mx-auto text-center">
-<!-- Icono principal centrado -->
 <div class="location-icon-circle">
 <i class="fa-solid fa-location-dot text-2xl text-[#F59E0B]"></i>
 </div>
-<!-- Título centrado -->
 <h3 class="font-display font-bold text-2xl md:text-3xl text-white mb-2 glow-text">¿Dónde estamos?</h3>
 <p class="text-gray-400/90 mb-8 text-sm md:text-base">Visítanos para validación final y reparaciones especializadas.</p>
 
-<!-- Info items centrados -->
 <div class="space-y-1 mb-8">
 <div class="location-info-item">
 <div class="location-info-icon bg-primary-green/10 text-primary-green">
@@ -1191,7 +1199,6 @@ Lun-Vie: 09:00-18:00 | Sáb: 09:00-13:00 | Dom: Cerrado
 </div>
 </div>
 
-<!-- Botones de acción centrados -->
 <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
 <a href="https://maps.app.goo.gl/GeWiYxvDSCN3ZDEo9" target="_blank" rel="noopener noreferrer" class="btn-primary px-6 py-3.5 rounded-2xl font-bold transition hover:shadow-neon flex items-center gap-2.5 text-sm md:text-base shadow-soft w-full sm:w-auto justify-center">
 <i class="fa-solid fa-map-location-dot text-lg"></i>
@@ -1203,7 +1210,6 @@ Lun-Vie: 09:00-18:00 | Sáb: 09:00-13:00 | Dom: Cerrado
 </a>
 </div>
 
-<!-- Badge garantía centrado -->
 <div class="inline-flex items-center gap-2.5 bg-white/5 border border-white/10 hover:border-[#F59E0B]/30 px-5 py-2.5 rounded-full transition-all">
 <i class="fa-solid fa-certificate text-[#F59E0B] text-lg"></i>
 <span class="text-sm font-medium text-gray-300">Garantía en todos nuestros servicios</span>
@@ -1213,16 +1219,33 @@ Lun-Vie: 09:00-18:00 | Sáb: 09:00-13:00 | Dom: Cerrado
 </div>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer class="bg-primary-dark/95 text-gray-500 py-10 md:py-14 border-t border-white/10">
 <div class="container mx-auto px-4">
 <div class="flex flex-col md:flex-row items-center justify-between gap-6">
 <div class="text-center md:text-left">
 <p class="mb-2 text-white font-display font-bold text-xl md:text-2xl glow-text tracking-tight main-title">Taller Mecánico TR</p>
 <p class="text-sm" data-es="Diagnóstico Automotriz Profesional" data-en="Professional Automotive Diagnosis">Diagnóstico Automotriz Profesional</p>
-<div class="mt-3 text-xs text-gray-400 space-y-1">
-<p><i class="fa-solid fa-location-dot text-primary-green mr-1"></i>8324, Cipolletti, Río Negro</p>
-<p><i class="fa-brands fa-whatsapp text-primary-green mr-1"></i>0299 557 0772</p>
-<p><i class="fa-regular fa-clock text-primary-green mr-1"></i>Lun-Vie: 09:00-18:00 | Sáb: 09:00-13:00 | Dom: Cerrado</p>
+<div class="mt-3 text-xs text-gray-400 space-y-2">
+<!-- Ubicación - BOTÓN FUNCIONAL -->
+<p>
+<a href="https://maps.app.goo.gl/GeWiYxvDSCN3ZDEo9" target="_blank" rel="noopener noreferrer" class="footer-btn" title="Ver ubicación en Google Maps">
+<span class="footer-btn-icon"><i class="fa-solid fa-location-dot"></i></span>
+<span>8324, Cipolletti, Río Negro</span>
+</a>
+</p>
+<!-- WhatsApp - BOTÓN FUNCIONAL -->
+<p>
+<a href="https://api.whatsapp.com/send?phone=542995570772" target="_blank" rel="noopener noreferrer" class="footer-btn" title="Chatear por WhatsApp">
+<span class="footer-btn-icon"><i class="fa-brands fa-whatsapp"></i></span>
+<span>0299 557 0772</span>
+</a>
+</p>
+<!-- Horarios (no es botón) -->
+<p>
+<i class="fa-regular fa-clock text-primary-green mr-1"></i>
+<span>Lun-Vie: 09:00-18:00 | Sáb: 09:00-13:00 | Dom: Cerrado</span>
+</p>
 </div>
 </div>
 <div class="flex items-center gap-4">
