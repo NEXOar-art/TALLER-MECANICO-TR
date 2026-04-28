@@ -485,57 +485,61 @@ box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
 .label-below span.required{ color: #EF4444; margin-left: 2px; }
 .input-modern:focus + .label-below{ color: #FBBF24; transform: translateX(4px); }
 
-/* ========== LOGO RECTANGULAR CON REFLEJO HOVER ========== */
+/* ========== LOGO RECTANGULAR RESPONSIVO ========== */
 
-/* Navbar Logo - RECTANGULAR CON BORDES REDONDEADOS */
+/* Navbar Logo - Contenedor */
 .navbar-logo{
 height: 62px;
 width: 140px;
-object-fit: contain;
 border-radius: 16px;
 border: 2.5px solid rgba(245, 158, 11, 0.9);
 box-shadow: 0 0 25px rgba(245, 158, 11, 0.5), inset 0 0 12px rgba(245, 158, 11, 0.15);
 transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 position: relative;
-overflow: visible;
+overflow: hidden;
 background: rgba(10, 10, 10, 0.4);
-padding: 6px;
+padding: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
 }
 
-/* Imagen del logo navbar con bordes redondeados */
+/* Imagen del logo navbar - se adapta perfectamente */
 .navbar-logo img{
-border-radius: 10px;
 width: 100%;
 height: 100%;
 object-fit: contain;
+border-radius: 10px;
+display: block;
 }
 
 /* Efecto de brillo/reflejo superior en logo navbar */
 .navbar-logo::before{
 content:'';
 position: absolute;
-top: 8%;
-left: 10%;
+top: 6%;
+left: 8%;
 width: 50%;
-height: 35%;
+height: 38%;
 background: linear-gradient(160deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.25) 45%, transparent 75%);
 border-radius: 12px;
 filter: blur(2px);
 opacity: 0;
 transition: opacity 0.3s ease;
 pointer-events: none;
-z-index: 2;
+z-index: 3;
 }
 
 /* REFLEJO ESPEJO debajo del logo navbar - EFECTO HOVER */
 .navbar-logo::after{
 content:'';
 position: absolute;
-bottom: -85%;
+bottom: -90%;
 left: 50%;
 transform: translateX(-50%) scaleY(-1);
-width: 90%;
-height: 60%;
+width: 85%;
+height: 55%;
 background: linear-gradient(to top, rgba(245, 158, 11, 0.3) 0%, rgba(245, 158, 11, 0.1) 40%, transparent 80%);
 border-radius: 16px;
 filter: blur(5px);
@@ -548,52 +552,53 @@ transition: all 0.3s ease;
 transform: scale(1.08) translateY(-3px);
 box-shadow: 0 0 40px rgba(245, 158, 11, 0.85), 0 10px 50px rgba(245, 158, 11, 0.4), var(--logo-glow);
 border-color: #FBBF24;
-animation: micro-bounce 0.5s ease;
 }
 .navbar-logo:hover::before{ opacity: 1; }
-.navbar-logo:hover::after{ 
-opacity: 0.85; 
-animation: shimmer 2s ease-in-out infinite;
-}
+.navbar-logo:hover::after{ opacity: 0.85; }
 
-/* Hero Logo - RECTANGULAR CON BORDES REDONDEADOS (AGRANDADO) */
+/* Hero Logo - Contenedor RESPONSIVO */
 .hero-logo{
 height: 7rem;
 width: 16rem;
-object-fit: contain;
+max-width: 100%;
 border-radius: 20px;
 border: 3.5px solid rgba(245, 158, 11, 0.95);
 box-shadow: 0 0 40px rgba(245, 158, 11, 0.65), 0 0 80px rgba(245, 158, 11, 0.35), inset 0 0 20px rgba(245, 158, 11, 0.2);
 transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 position: relative;
-overflow: visible;
+overflow: hidden;
 background: rgba(10, 10, 10, 0.3);
-padding: 12px;
+padding: 14px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
 }
 
-/* Imagen del logo hero con bordes redondeados */
+/* Imagen del logo hero - se adapta perfectamente */
 .hero-logo img{
-border-radius: 14px;
 width: 100%;
 height: 100%;
 object-fit: contain;
+border-radius: 14px;
+display: block;
 }
 
 /* Efecto de brillo/reflejo superior en logo hero */
 .hero-logo::before{
 content:'';
 position: absolute;
-top: 8%;
-left: 8%;
+top: 6%;
+left: 6%;
 width: 45%;
-height: 32%;
+height: 35%;
 background: linear-gradient(160deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 40%, transparent 70%);
 border-radius: 14px;
 filter: blur(3px);
 opacity: 0;
 transition: opacity 0.3s ease;
 pointer-events: none;
-z-index: 2;
+z-index: 3;
 }
 
 /* REFLEJO ESPEJO debajo del logo hero - EFECTO HOVER */
@@ -603,8 +608,8 @@ position: absolute;
 bottom: -75%;
 left: 50%;
 transform: translateX(-50%) scaleY(-1);
-width: 85%;
-height: 55%;
+width: 80%;
+height: 50%;
 background: linear-gradient(to top, rgba(245, 158, 11, 0.35) 0%, rgba(245, 158, 11, 0.12) 35%, transparent 75%);
 border-radius: 16px;
 filter: blur(7px);
@@ -616,28 +621,98 @@ transition: all 0.3s ease;
 .hero-logo:hover{ 
 transform: scale(1.06) translateY(-5px);
 box-shadow: 0 0 50px rgba(245, 158, 11, 0.9), 0 0 90px rgba(245, 158, 11, 0.45), 0 15px 60px rgba(0,0,0,0.35), var(--logo-glow);
-animation: micro-tilt 0.3s ease-out;
 }
 .hero-logo:hover::before{ opacity: 1; }
-.hero-logo:hover::after{ 
-opacity: 0.9; 
-animation: shimmer 2.2s ease-in-out infinite;
+.hero-logo:hover::after{ opacity: 0.9; }
+
+/* Responsive logos - TABLET */
+@media(max-width: 768px){ 
+    .navbar-logo{
+        height: 50px; 
+        width: 115px; 
+        border-width: 2px; 
+        border-radius: 14px; 
+        padding: 7px;
+    }
+    .navbar-logo img{ 
+        border-radius: 9px; 
+    }
+    .hero-logo{
+        height: 5.5rem; 
+        width: 13rem; 
+        border-radius: 16px; 
+        padding: 12px;
+        border-width: 3px;
+    }
+    .hero-logo img{ 
+        border-radius: 12px; 
+    }
 }
 
-/* Responsive logos rectangulares */
-@media(max-width: 768px){ 
-    .navbar-logo{height: 50px; width: 110px; border-width: 2px; border-radius: 14px; padding: 5px;} 
-    .navbar-logo img{ border-radius: 9px; }
-    .hero-logo{height: 5.5rem; width: 13rem; border-radius: 16px; padding: 10px;}
-    .hero-logo img{ border-radius: 12px; }
+/* Responsive logos - MÓVIL GRANDE */
+@media(max-width: 640px){
+    .navbar-logo{
+        height: 46px;
+        width: 105px;
+        border-radius: 13px;
+        padding: 6px;
+    }
+    .navbar-logo img{
+        border-radius: 8px;
+    }
+    .hero-logo{
+        height: 4.5rem;
+        width: 11rem;
+        border-radius: 14px;
+        padding: 10px;
+        border-width: 2.5px;
+    }
+    .hero-logo img{
+        border-radius: 10px;
+    }
 }
+
+/* Responsive logos - MÓVIL PEQUEÑO */
 @media(max-width: 475px){
-    .navbar-logo{height: 44px; width: 95px; border-radius: 12px; padding: 4px;}
-    .navbar-logo img{ border-radius: 8px; }
-    .hero-logo{height: 4.5rem; width: 10rem; border-radius: 14px; padding: 8px;}
-    .hero-logo img{ border-radius: 10px; }
+    .navbar-logo{
+        height: 40px;
+        width: 90px;
+        border-radius: 12px;
+        padding: 5px;
+        border-width: 2px;
+    }
+    .navbar-logo img{
+        border-radius: 7px;
+    }
+    .hero-logo{
+        height: 4rem;
+        width: 9.5rem;
+        border-radius: 12px;
+        padding: 8px;
+        border-width: 2px;
+    }
+    .hero-logo img{
+        border-radius: 8px;
+    }
+    .hero-logo-wrapper{
+        margin-left: 1rem;
+    }
 }
-/* ========== FIN LOGO RECTANGULAR CON REFLEJO ========== */
+
+/* Responsive logos - MÓVIL MUY PEQUEÑO */
+@media(max-width: 380px){
+    .navbar-logo{
+        height: 36px;
+        width: 80px;
+        padding: 4px;
+    }
+    .hero-logo{
+        height: 3.5rem;
+        width: 8.5rem;
+        padding: 7px;
+    }
+}
+/* ========== FIN LOGO RECTANGULAR RESPONSIVO ========== */
 
 /* Language Switcher Styles con micro-efectos */
 .lang-switcher{
@@ -649,7 +724,6 @@ cursor: pointer; transition: all 0.3s ease; font-size: 0.875rem;
 background: rgba(245, 158, 11, 0.3); 
 border-color: #F59E0B; 
 transform: translateY(-2px);
-animation: micro-bounce 0.4s ease;
 }
 .lang-switcher:active{ transform: translateY(0) scale(0.98); }
 
