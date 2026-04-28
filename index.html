@@ -462,34 +462,34 @@ box-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
 .label-below span.required{ color: #EF4444; margin-left: 2px; }
 .input-modern:focus + .label-below{ color: #FFB300; transform: translateX(4px); }
 
-/* ========== LOGO OVALADO CON EFECTO DE REFLEJO ========== */
+/* ========== LOGO RECTANGULAR CON VÉRTICES REDONDEADOS - MEJORADO ========== */
 
-/* Navbar Logo - FORMA OVALADA */
+/* Navbar Logo - FORMA RECTANGULAR CON BORDES REDONDEADOS */
 .navbar-logo{
-height: 58px;
-width: 88px;
+height: 65px;
+width: 140px;
 object-fit: contain;
-border-radius: 50% / 35%; /* Forma ovalada horizontal */
-border: 2px solid rgba(212, 175, 55, 0.8);
-box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), inset 0 0 10px rgba(212, 175, 55, 0.1);
+border-radius: 18px; /* Vértices redondeados rectangulares */
+border: 2.5px solid rgba(212, 175, 55, 0.9);
+box-shadow: 0 0 25px rgba(212, 175, 55, 0.6), inset 0 0 12px rgba(212, 175, 55, 0.15), var(--logo-glow);
 transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 position: relative;
 overflow: visible;
-background: rgba(10, 10, 10, 0.3);
+background: rgba(10, 10, 10, 0.4);
 }
 
 /* Efecto de brillo/reflejo superior en logo navbar */
 .navbar-logo::before{
 content:'';
 position: absolute;
-top: 4%;
-left: 15%;
-width: 40%;
-height: 30%;
-background: linear-gradient(160deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 40%, transparent 70%);
-border-radius: 50% / 35%;
+top: 8%;
+left: 10%;
+width: 50%;
+height: 35%;
+background: linear-gradient(160deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.25) 45%, transparent 75%);
+border-radius: 12px;
 filter: blur(2px);
-opacity: 0.7;
+opacity: 0.75;
 transition: opacity 0.3s ease;
 pointer-events: none;
 z-index: 2;
@@ -499,55 +499,55 @@ z-index: 2;
 .navbar-logo::after{
 content:'';
 position: absolute;
-bottom: -70%;
+bottom: -75%;
 left: 50%;
 transform: translateX(-50%) scaleY(-1);
-width: 80%;
-height: 50%;
-background: linear-gradient(to top, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
-border-radius: 50% / 35%;
-filter: blur(4px);
-opacity: 0.5;
+width: 85%;
+height: 55%;
+background: linear-gradient(to top, rgba(212, 175, 55, 0.2) 0%, transparent 75%);
+border-radius: 14px;
+filter: blur(5px);
+opacity: 0.55;
 pointer-events: none;
 transition: opacity 0.3s ease;
 }
 
 .navbar-logo:hover{ 
-transform: scale(1.1) translateY(-2px);
-box-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 8px 40px rgba(212, 175, 55, 0.3);
+transform: scale(1.08) translateY(-3px);
+box-shadow: 0 0 35px rgba(212, 175, 55, 0.9), 0 10px 45px rgba(212, 175, 55, 0.4), var(--logo-glow);
 border-color: #D4AF37;
 animation: micro-bounce 0.5s ease;
 }
 .navbar-logo:hover::before{ opacity: 1; }
-.navbar-logo:hover::after{ opacity: 0.7; }
+.navbar-logo:hover::after{ opacity: 0.75; }
 
-/* Hero Logo - FORMA OVALADA */
+/* Hero Logo - FORMA RECTANGULAR CON BORDES REDONDEADOS - MÁS GRANDE */
 .hero-logo{
-height: 9rem;
-width: 13rem;
+height: 11rem;
+width: 18rem;
 object-fit: contain;
-border-radius: 50% / 35%; /* Forma ovalada horizontal */
-border: 3px solid rgba(212, 175, 55, 0.9);
-box-shadow: 0 0 30px rgba(212, 175, 55, 0.6), 0 0 60px rgba(212, 175, 55, 0.3), inset 0 0 15px rgba(212, 175, 55, 0.15);
+border-radius: 24px; /* Vértices redondeados rectangulares */
+border: 3.5px solid rgba(212, 175, 55, 0.95);
+box-shadow: 0 0 40px rgba(212, 175, 55, 0.7), 0 0 80px rgba(212, 175, 55, 0.35), inset 0 0 20px rgba(212, 175, 55, 0.2), var(--logo-glow);
 transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 position: relative;
 overflow: visible;
 animation: pulse-gold 3s ease-in-out infinite;
-background: rgba(10, 10, 10, 0.2);
+background: rgba(10, 10, 10, 0.25);
 }
 
 /* Efecto de brillo/reflejo superior en logo hero */
 .hero-logo::before{
 content:'';
 position: absolute;
-top: 5%;
-left: 12%;
-width: 35%;
-height: 28%;
-background: linear-gradient(160deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.25) 35%, transparent 65%);
-border-radius: 50% / 35%;
-filter: blur(3px);
-opacity: 0.8;
+top: 6%;
+left: 8%;
+width: 45%;
+height: 32%;
+background: linear-gradient(160deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 40%, transparent 70%);
+border-radius: 18px;
+filter: blur(4px);
+opacity: 0.85;
 transition: opacity 0.3s ease;
 pointer-events: none;
 z-index: 2;
@@ -557,37 +557,70 @@ z-index: 2;
 .hero-logo::after{
 content:'';
 position: absolute;
-bottom: -60%;
+bottom: -65%;
 left: 50%;
 transform: translateX(-50%) scaleY(-1);
-width: 75%;
-height: 45%;
-background: linear-gradient(to top, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.08) 30%, transparent 70%);
-border-radius: 50% / 35%;
-filter: blur(6px);
-opacity: 0.6;
+width: 80%;
+height: 50%;
+background: linear-gradient(to top, rgba(212, 175, 55, 0.3) 0%, rgba(212, 175, 55, 0.1) 35%, transparent 75%);
+border-radius: 20px;
+filter: blur(7px);
+opacity: 0.65;
 pointer-events: none;
 transition: opacity 0.3s ease;
 }
 
 .hero-logo:hover{ 
-transform: scale(1.05) translateY(-4px);
-box-shadow: 0 0 40px rgba(212, 175, 55, 0.8), 0 0 80px rgba(212, 175, 55, 0.4), 0 12px 50px rgba(0,0,0,0.3);
+transform: scale(1.06) translateY(-5px);
+box-shadow: 0 0 50px rgba(212, 175, 55, 0.9), 0 0 100px rgba(212, 175, 55, 0.5), 0 15px 60px rgba(0,0,0,0.4), var(--logo-glow);
 animation: micro-tilt 0.3s ease-out;
 }
 .hero-logo:hover::before{ opacity: 1; }
-.hero-logo:hover::after{ opacity: 0.8; }
+.hero-logo:hover::after{ opacity: 0.85; }
 
-/* Responsive logos ovalados */
+/* Responsive logos rectangulares */
 @media(max-width: 768px){ 
-    .navbar-logo{height: 45px; width: 68px; border-width: 1.5px;} 
-    .hero-logo{height: 5.5rem; width: 8.5rem;}
+    .navbar-logo{height: 52px; width: 110px; border-width: 2px; border-radius: 14px;} 
+    .hero-logo{height: 7rem; width: 12rem; border-radius: 18px;}
 }
 @media(max-width: 475px){
-    .navbar-logo{height: 40px; width: 60px;}
-    .hero-logo{height: 4.5rem; width: 7rem;}
+    .navbar-logo{height: 46px; width: 95px; border-radius: 12px;}
+    .hero-logo{height: 5.5rem; width: 9rem; border-radius: 16px;}
 }
-/* ========== FIN LOGO OVALADO CON REFLEJO ========== */
+/* ========== FIN LOGO RECTANGULAR CON REFLEJO ========== */
+
+/* ========== TIPOGRAFÍA MEJORADA PARA EL TALLER ========== */
+.workshop-title{
+font-family: 'Space Grotesk', sans-serif;
+font-weight: 800;
+background: var(--gradient-gold);
+background-size: 300% 300%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+animation: gradient-shift-premium 3s ease infinite;
+text-shadow: 0 0 25px rgba(212, 175, 55, 0.5), 0 0 50px rgba(255, 179, 0, 0.3);
+letter-spacing: -0.03em;
+position: relative;
+display: inline-block;
+}
+.workshop-title::after{
+content: '';
+position: absolute;
+bottom: -4px;
+left: 0;
+width: 100%;
+height: 3px;
+background: var(--gradient-primary);
+border-radius: 2px;
+opacity: 0.7;
+filter: blur(1px);
+}
+@keyframes gradient-shift-premium{
+0%, 100%{ background-position: 0% 50%; }
+50%{ background-position: 100% 50%; }
+}
+/* ========== FIN TIPOGRAFÍA MEJORADA ========== */
 
 /* Language Switcher Styles con micro-efectos */
 .lang-switcher{
@@ -665,6 +698,8 @@ z-index: 0;
 <div class="info-banner-icon"><i class="fa-solid fa-lightbulb"></i></div>
 <div class="banner-scroll-container">
 <div class="banner-text">
+<div class="banner-item"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp: 02995570772</span><i class="fa-solid fa-message"></i></div>
+<span class="banner-divider">|</span>
 <div class="banner-item"><i class="fa-solid fa-screwdriver-wrench"></i><span>Limpieza de inyectores cada 6 meses = motor más eficiente</span><i class="fa-solid fa-car"></i></div>
 <span class="banner-divider">|</span>
 <div class="banner-item"><i class="fa-solid fa-gas-pump"></i><span>Usar nafta premium = más potencia y menos desgaste</span><i class="fa-solid fa-wind"></i></div>
@@ -684,12 +719,12 @@ z-index: 0;
 <!-- NAVBAR-->
 <nav class="fixed w-full z-50 glass border-b border-white/10 transition-all duration-300" id="navbar">
 <div class="container mx-auto px-4 h-16 md:h-20 flex items-center relative">
-<!-- LOGO OVALADO -->
+<!-- LOGO RECTANGULAR -->
 <a href="#" class="flex items-center md:absolute md:left-4 md:translate-x-0">
 <img src="TALLERTR.png" alt="Taller Mecánico TR Logo" class="navbar-logo">
 </a>
-<!-- Título centrado -->
-<a href="#" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 md:ml-auto md:mr-auto font-display font-bold text-lg sm:text-xl md:text-2xl gradient-text tracking-tight uppercase text-center md:text-left drop-shadow-lg" data-es="Taller Mecánico TR" data-en="Taller Mecánico TR">Taller Mecánico TR</a>
+<!-- Título centrado con tipografía mejorada -->
+<a href="#" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 md:ml-auto md:mr-auto workshop-title tracking-tight uppercase text-center md:text-left drop-shadow-lg" data-es="Taller Mecánico TR" data-en="Taller Mecánico TR">Taller Mecánico TR</a>
 <div class="ml-auto flex items-center gap-2 md:gap-3">
 <!-- Language Switcher -->
 <button id="langToggle" class="lang-switcher flex items-center gap-2 order-2 md:order-3"><i class="fa-solid fa-language"></i><span id="langText">EN</span></button>
